@@ -45,15 +45,7 @@ main = do
       putStrLn $ "Heist init failed: " ++ show err
     Right heistState -> do
       -- 3. Apply the precompiled templates to data
-      -- I need to replace <apply-content /> in index.tpl with the body-greeting splice, but I don't know how.
-      -- I do not want to add the splice to "mainSplices" since in a server environment I would like to
-      -- precompile the base splices once and then "add overlays" in each route handler
-
-      -- This has <body-greeting /> inside of it, which we've already compiled and handled through "mainSplices"
-      let (bodyTpl :: C.Splice IO) = C.callTemplate "body"
-      -- ^-- stick this into the index.tpl template somehow, replacing the <apply-content /> tag
-
-      case C.renderTemplate heistState "index" of
+      case C.renderTemplate heistState "body" of
         Nothing -> do
           putStrLn "Index not found!"
         Just (docRuntime, _) -> do

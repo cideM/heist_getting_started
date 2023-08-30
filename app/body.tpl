@@ -1,1 +1,3 @@
-<p><body-greeting /></p>
+<apply template="index">
+  <p><body-greeting /></p>
+</apply>
