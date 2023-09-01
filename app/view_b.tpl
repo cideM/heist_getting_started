@@ -1,3 +1,5 @@
 <apply template="index">
-  <p><body-greeting /></p>
+  <count />
+  <foo />
 </apply>
+

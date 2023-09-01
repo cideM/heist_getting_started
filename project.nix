@@ -1,5 +1,5 @@
 { mkDerivation, base, blaze-builder, heist, lib, map-syntax
-, microlens-platform, text, transformers
+, microlens-platform, mtl, text
 }:
 mkDerivation {
   pname = "haskell-starter";
@@ -8,8 +8,7 @@ mkDerivation {
   isLibrary = false;
   isExecutable = true;
   executableHaskellDepends = [
-    base blaze-builder heist map-syntax microlens-platform text
-    transformers
+    base blaze-builder heist map-syntax microlens-platform mtl text
   ];
   license = "unknown";
   mainProgram = "haskell-starter";
