@@ -1,3 +1,7 @@
+# Trying (and Failing) to Use Heist
+
+This repository was created to accompany [this short series of blog posts](https://www.fbrs.io/tags/heist-journal/).
+
 ## Getting Started
 
 If you have Nix you can do `nix develop` followed by `cabal run`. If you don't have Nix, you can also just run `cabal run` granted that GHC is available. At the time of writing I'm using GHC 9.4.6.
